@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <link rel="stylesheet" href="noticias.css">
+</head>
+<body>
+
+  <canvas id="fundo"></canvas>  
+
+     <!--Menu de navegação-->
+    <nav>
+      <button class="hamburger" id="btn-menu">
+        ☰
+      </button>
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Notícias</a></li>
+          <li><a href="index.html#curiosidades">Curiosidades</a></li>
+          <li><a href="#faleconosco">Fale Conosco</a></li>
+          <li><a href="galeria.html">Galeria de Fotos</a></li>
+        </ul>
+      </nav>
+    <main class="notícias">
+
+    <section class="topo-noticias">
+      <div class="topo-noticias-conteudo">
+        <h1>Notícias</h1>
+          <p>
+            Acompanhe os principais destaques, eventos e ações desenvolvidas
+            pela nossa instituição.
+          </p>
+          <span class="linha-decorativa"></span>
+        </div>
+    </section>
+
+    <div class="carousel-container">
+    <div class="carousel" id="mainCarousel">
+
+        <a href="http://www.uea.edu.br/index.php/2025/12/02/em-tabatinga-lamatcom-da-uea-realiza-mostra-cientifica-para-alunos-da-educacao-basica/" target="_blank" class="slide active">
+            <img src="noticias/mostra-cientifica001.jpeg" alt="mostra científica">
+            <div class="slide-title">Em Tabatinga, Lamatcom da UEA realiza mostra científica para alunos da educação básica</div>
+        </a>
+
+        <a href="link-do-banner-2.html" class="slide">
+            <img src="img/banner2.jpg" alt="">
+        </a>
+
+        <a href="link-do-banner-3.html" class="slide">
+            <img src="img/banner3.jpg" alt="">
+        </a>
+
+    </div>
+    <!-- Bolinhas -->
+    <div class="dots" id="carouselDots"></div>
+
+
+    <!-- Setas -->
+    <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+    <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+
+</div>
+ 
+
+<h2 class="news-title">Notícias</h2>
+
+<div class="news-container">
+
+    <a href="http://www.uea.edu.br/index.php/2025/12/02/em-tabatinga-lamatcom-da-uea-realiza-mostra-cientifica-para-alunos-da-educacao-basica/" target="_blank" class="news-card">
+        <img src="noticias/mostra-cientifica001.jpeg">
+        <p>Em Tabatinga, Lamatcom da UEA realiza mostra científica para alunos da educação básica</p>
+    </a>
+
+    <a href="link-noticia-2.html" class="news-card">
+        <img src="img/noticia2.jpg">
+        <p>Título da notícia 2</p>
+    </a>
+
+    <a href="link-noticia-3.html" class="news-card">
+        <img src="img/noticia3.jpg">
+        <p>Título da notícia 3</p>
+    </a>
+
+    <a href="link-noticia-4.html" class="news-card">
+        <img src="img/noticia4.jpg">
+        <p>Título da notícia 4</p>
+    </a>
+
+</div>
+
+    </main>
+
+        <footer class="footer-home">
+
+            <div class="footer-logos">
+
+              <img src="logos/Lamatcom alternativo.png" alt="logo lamatcom">
+              <img src="logos/cestb-branco.png" alt="cestb-branco">
+
+            </div>
+
+              <div class="footer-info">
+                <div class="footer-section">
+                    <section id="faleconosco">
+                      <h3>Fale Conosco:</h3>
+                    </section>
+                    <hr>
+                    <a href="mailto: lamatcom@uea.edu.br">
+                      <i class="fas fa-envelope"></i>Lamatcom@uea.edu.br
+                    </a>
+                </div>
+                
+                <div class="footer-section">
+                  <h3>Saiba Mais:</h3>
+                  <hr>
+                      <a href="lamatcom.html">Lamatcom</a><br>
+                      <a href="pesquisadores.html">Os Pesquisadores</a><br>
+                      <a href="fontes.html">Fontes de Pesquisa</a>
+                </div>
+              </div>
+             
+        </footer>
+
+      <footer class="footer-referencia">
+        <p>&copy;2025 - Centro de Estudos Superiores de Tabatinga - Site Informativo. Todos os direitos reservados.</p>
+      </footer>
+
+      <script src="menu.js"></script>
+      <script src="noticias.js"></script>
+      <script src="fundo.js"></script>
+    
+</body>
+</html>

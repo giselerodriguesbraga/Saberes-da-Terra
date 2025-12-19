@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+ #indigenas {
+  margin: 60px auto;
+  text-align: center;
+  max-width: 1000px;
+}
+
+#indigenas h2 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+/* Contêiner da linha do tempo */
+.linha-do-tempo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+}
+
+/* Linha central */
+.linha-do-tempo::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ccc;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+/* Cada ponto/etnia */
+.etnia-item {
+  position: relative;
+  flex: 0 0 auto;
+  width: 180px;
+  scroll-snap-align: center;
+  text-align: center;
+  z-index: 1;
+}
+
+/* O ponto na linha */
+.etnia-item::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #004aad;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px auto;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px #004aad55;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.etnia-item:hover::before {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 6px #004aad33;
+}
+
+/* Links */
+.etnia-item a {
+  text-decoration: none;
+  color: #002b5c;
+  transition: color 0.3s ease;
+}
+
+.etnia-item a:hover {
+  color: #0074ff;
+}
+
+/* Título da etnia */
+.etnia-item h3 {
+  font-size: 1rem;
+  margin-top: 5px;
+}

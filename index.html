@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Informativo </title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsivo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <canvas id="fundo"></canvas>   
+
+     <header>
+     <!--Barra de pesquisa-->
+     <div class="barra-de-pesquisa">
+        <button id="search-button" class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <input type="text" placeholder="Pesquisar..." id="search-input">
+      </div>
+
+       <div class="sugestoes" id="sugestoes-box"></div>
+ 
+
+      <!--logo e título-->
+       <div class="logo">
+          <img src="logos/logouea.png" alt="Logo UEA">
+        </div>
+        
+        <div class="header-text">
+          <h1>Saberes da Terra</h1>
+          <h2>Matemática Indígena</h2>
+        </div>
+    </header>
+      <!--Menu de navegação-->
+    <nav>
+      <button class="hamburger" id="btn-menu">
+        ☰
+      </button>
+        <ul id="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="#curiosidades">Curiosidades</a></li>
+          <li><a href="#faleconosco">Fale Conosco</a></li>
+          <li><a href="galeria.html">Galeria de Fotos</a></li>
+        </ul>
+      </nav>
+  
+  <main>
+
+    <div class="texto-home">
+      <section id="home">
+        <!--<h2>Povos Indígenas de Tabatinga</h2>-->
+        <h2>A população indígena: origens e distribuição</h2>
+      </section>  
+
+        <section class="texto-ler-mais">
+          <p>
+            Todos os povos indígenas da América, desde os <strong>povos Inuit e Yupik</strong> até os da <strong>Patagônia</strong>, passando pelos povos indígenas da América do Norte, Astecas, Maias, Incas e pelos diversos povos originários do Brasil, têm suas origens na Ásia e, possivelmente, também na Oceania. Em um período ainda desconhecido, mas que pode ter começado há mais de 40 ou 50 mil anos — quando a agricultura, a cerâmica e a tecelagem ainda não existiam e a humanidade vivia no Paleolítico — tiveram início as migrações que resultaram no povoamento do continente americano. Grupos de caçadores nômades, em sucessivas ondas, migraram da Ásia Oriental para a América do Norte através do Estreito de Behring, que na época era uma ponte de terra firme e gelo. Esses grupos seguiam as manadas de grandes mamíferos e foram se espalhando lentamente pelo continente, descendo pela América Central e do Sul até chegar ao atual território brasileiro, há cerca de 30 mil anos ou mais.
+          </p>
+
+        <div id="texto-completo" class="hidden">
+          <p>
+            Feita essa introdução, podemos voltar ao povoamento indígena da Amazônia. Ele era formado principalmente por povos pertencentes aos troncos linguísticos <strong>Aruak, Tupi e Karib</strong>. Os Aruak, que parecem ter se dispersado há mais tempo, ocuparam a metade ocidental da bacia amazônica, estendendo-se até o Orinoco e o litoral das Guianas. Os Tupi, além de ocuparem o litoral brasileiro e a bacia do Paraná, viviam também na região centro-leste da Amazônia. Já os Karib, de dispersão mais recente, se concentraram ao norte e leste da floresta e nas Guianas.
+          </p>
+
+          <p>
+            Na foz do rio Amazonas — especialmente na <strong>Ilha de Marajó</strong> e no <strong>Amapá</strong> — os arqueólogos <strong>Meggers e Evans</strong> descobriram, a partir de 1948, uma sequência de cinco fases cerâmicas que representam diferentes culturas arqueológicas, datadas desde o século X a.C. até o período da chegada dos europeus. Os povos que produziam essa cerâmica viviam em aldeias compostas por casas comunitárias, inicialmente erguidas sobre palafitas e, mais tarde, sobre plataformas de terra. A quarta dessas fases, conhecida como <strong>Marajoara</strong>, marcou o auge do desenvolvimento cultural da região. Surgiram então cerâmicas sofisticadas com pinturas geométricas, plataformas de terra elevadas para proteger as aldeias das cheias, além de objetos de adorno e figuras rituais.
+          </p>
+    </div>
+        <button id="lerMaisBtn">Ler mais</button>
+      </section>
+      
+        <!-- Seção Linha do Tempo -->
+
+  <section id="indigenas">
+  <h2>Matemática dos Povos Indígenas</h2>
+
+  <div class="linha-do-tempo">
+    <div class="etnia-item">
+      <a href="pagina1.html" rel="next">
+        <h3>Etnia Ticuna</h3>
+      </a>
+    </div>
+    <div class="etnia-item">
+      <a href="pagina2.html" rel="next">
+        <h3>Etnia Kocama</h3>
+      </a>
+    </div>
+    <div class="etnia-item">
+      <a href="pagina3.html" rel="next">
+        <h3>Etnia Kambeba</h3>
+      </a>
+    </div>
+    <div class="etnia-item">
+      <a href="pagina4.html" rel="next">
+        <h3>Etnia Kanamari</h3>
+      </a>
+    </div>
+    <div class="etnia-item">
+      <a href="pagina5.html" rel="next">
+        <h3>Curiosidades sobre as Etnias</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+          <!-- Seção de Curiosidades -->
+<h2>Curiosidades</h2>
+
+        <section id="curiosidades">
+            <div class="curiosidades-container">
+                <div class="curiosidade-card">
+                    <h3><a href="https://www.impa.br/" target="_blank">Visite o IMPA</a></h3>
+                    <img src="imagens/impa.png" alt="IMPA">
+                     <p>O Instituto de Matemática Pura e Aplicada (IMPA) é uma das principais instituições de pesquisa e ensino de matemática do Brasil. No site é possível encontrar informações sobre projetos, publicações e iniciativas voltadas à divulgação científica.</p>
+                </div>
+                
+                <div class="curiosidade-card">
+                    <h3><a href="https://www.youtube.com/playlist?list=PLUBR4s0w2cG0BmFXAocm69Gd0R6bzQFsF" target="_blank"> Visite Os Mistérios da Matemática</a></h3>
+                    <img src="imagens/Misterios-mat.png" alt="Mistérios da Matemática">
+                    <p>A playlist “Mistérios da Matemática”, no canal Origens NT no YouTube, reúne vídeos educativos com explicações e curiosidades que tornam o aprendizado da matemática mais simples e acessível.</p>
+                </div>
+                
+                <div class="curiosidade-card">
+                    <h3><a href="https://www.storyboardthat.com/pt/create/planilhas-de-enigmas-matem%C3%A1ticos" target="_blank"> Visite O Enigmas Matemáticas</a></h3>
+                    <img src="imagens/enigmas-mat.jpeg" alt="Enigmas">
+                    <p>O site Storyboard That oferece planilhas de enigmas matemáticos, com atividades que estimulam o raciocínio lógico e a resolução de desafios. Elas podem ser personalizadas e usadas como recurso para tornar o aprendizado mais interativo e envolvente.</p>
+                </div>
+                 <div class="curiosidade-card">
+                    <h3><a href="https://www.youtube.com/@CienciaTodoDia" target="_blank"> Visite O Ciência Todo Dia</a></h3>
+                    <img src="imagens/Ciencia-todo-dia.jpg" alt="Ciência Todo Dia">
+                    <p>O canal Ciência Todo Dia, no YouTube, produz vídeos sobre ciência, tecnologia e curiosidades do universo. Com uma linguagem acessível, o canal busca aproximar o público do conhecimento científico e despertar o interesse pela pesquisa e pela aprendizagem.</p>
+                </div>
+
+                <div class="curiosidade-card">
+                    <h3><a href="https://www.youtube.com/@manualdomundo" target="_blank"> Visite O Manual do Mundo</a></h3>
+                    <img src="imagens/manual do mundo.jpg" alt="Manual do Mundo">
+                    <p>O canal Manual do Mundo, disponível no YouTube, é voltado à divulgação de experiências científicas, curiosidades e desafios práticos que despertam o interesse pela ciência e pela criatividade. Com uma abordagem educativa e divertida, o canal estimula a aprendizagem de forma leve e interativa.</p>
+                </div>
+
+                <div class="curiosidade-card">
+                    <h3><a href="https://www.instagram.com/fabio.lennon.marchon/" target="_blank"> Visite O Matemática</a></h3>
+                    <img src="imagens/mat.jpg" alt="
+                    Matemática">
+                    <p>O perfil de Fábio Lennon Marchon, no Instagram, compartilha conteúdos educativos e curiosidades relacionadas à matemática e ao ensino. Com publicações voltadas à aprendizagem e à divulgação científica, o perfil busca aproximar o público dos conceitos matemáticos de forma simples e interessante.</p>
+                </div>
+
+          </section>
+
+      </main>
+
+          <footer class="footer-home">
+
+            <div class="footer-logos">
+
+              <img src="logos/Lamatcom alternativo.png" alt="logo lamatcom">
+              <img src="logos/cestb-branco.png" alt="cestb-branco">
+
+            </div>
+
+              <div class="footer-info">
+                <div class="footer-section">
+                    <section id="faleconosco">
+                      <h3>Fale Conosco:</h3>
+                    </section>
+                    <hr>
+                    <a href="mailto: lamatcom@uea.edu.br">
+                      <i class="fas fa-envelope"></i>Lamatcom@uea.edu.br
+                    </a>
+                </div>
+                
+                <div class="footer-section">
+                  <h3>Saiba Mais:</h3>
+                  <hr>
+                      <a href="lamatcom.html">Lamatcom</a><br>
+                      <a href="pesquisadores.html">Os Pesquisadores</a><br>
+                      <a href="fontes.html">Fontes de Pesquisa</a>
+                </div>
+              </div>
+             
+        </footer>
+
+      <footer class="footer-referencia">
+        <p>&copy;2025 - Centro de Estudos Superiores de Tabatinga - Site Informativo. Todos os direitos reservados.</p>
+      </footer>
+  
+
+    <script src="script.js"></script>
+    <script src="fundo.js"></script>
+    <script src="menu.js"></script>
+
+</body>
+</html>

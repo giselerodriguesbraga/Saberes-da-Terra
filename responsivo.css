@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+    @media (max-width: 950px) {
+       header {
+            flex-direction: column;
+            text-align: center;
+            display: flex;
+            padding: 30px 20px;
+          } 
+        .sugestoes{
+            margin-top: 40px;
+          }
+        .logo img {
+            width: 140px;
+            height: auto;
+           }
+        .header-text{
+            text-align: center;
+            margin-top: 15px;
+          }
+        .header-text h1 {
+            font-size: 3.5rem;
+          }
+        .header-text h2 {
+            font-size: 1.5rem;
+          
+          }
+          /*Menu*/
+        .hamburger {
+        display: block;       /* Mostra o ícone do menu */
+         }
+
+        nav ul {
+          display: none;        /* Esconde o menu */
+          flex-direction: column;
+          width: 100%;
+          background-color: var(--cor2);
+          }
+
+          nav ul.open {
+            display: flex;        /* Mostra quando clicar */
+          }
+
+          nav ul li a {
+            padding: 15px;
+            border-radius: 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+          }
+        
+        .etnia{
+          padding: 10px;
+          margin: auto;
+        }
+        main section#etnia{
+          padding: 15px 10px;
+        }
+        section#etnia h1{
+          font-size: 2rem;
+        }
+
+          .curiosidades-container {
+          grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+      @media (max-width: 600px) {
+        .curiosidades-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+@media (max-width: 768px){
+          /*paginas*/
+           .paginas {
+            width: 90%;
+            margin: 20px auto;
+          }
+          /*etniaticuna*/
+            .container {
+              flex-direction: column;
+            }
+        }
+        
+/* Linha do tempo */
+@media (max-width: 700px) {
+  .linha-do-tempo {
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  .etnia-item {
+    width: 150px;
+  }
+}

@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+/* ------ GALERIA ------ */
+/*
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: zoom-in;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.03);
+}
+
+/* ------ RESPONSIVO ------ */
+/*
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .galeria img {
+        height: 320px;
+    }
+}
+
+/* ------ OVERLAY DO ZOOM ------ */
+/*
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    cursor: zoom-out;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}*/
+
+
+/* ==========================
+    GALERIA MOSAICO
+========================== */
+
+.mosaico {
+    column-count: 4;     /* quantidade de colunas no desktop */
+    column-gap: 20px;
+    padding: 20px;
+}
+
+.mosaico-item {
+    break-inside: avoid;  /* evita cortar a imagem entre colunas */
+    margin-bottom: 20px;
+}
+
+.mosaico img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform .3s ease;
+}
+
+.mosaico img:hover {
+    transform: scale(1.03);
+}
+/* ------ OVERLAY DO ZOOM ------ */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    cursor: zoom-out;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+/* ==========================
+    RESPONSIVIDADE
+========================== */
+
+@media (max-width: 1200px) {
+    .mosaico {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .mosaico {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .mosaico {
+        column-count: 1;
+    }
+}

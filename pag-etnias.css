@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+ /*paginas das etnias*/
+ .etnia{
+  padding: 10px 60px;
+  margin: auto;
+ }
+
+    main section#etnia{
+      background-color: var(--cor2);
+      color: white;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 25px 30px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.22);
+    }
+    section#etnia h1{
+      font-size: 2.3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+    .etnia h2 {
+      background-image: linear-gradient(to right, var(--cor1), var(--cor0
+      ));
+      margin-bottom: 1em;
+      padding: 5px;
+      font-size: 30px;
+    }
+    .etnia h3{
+      font-size: 25px;
+    }
+    .italico{
+      font-style: italic;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .etnia li {
+      font-size: 20px;
+    }
+    .etnia ul {
+      margin: 10px 0 20px 55px;
+      list-style-type: circle;
+      margin-top: 5px;
+    }
+    .etnia ul li {
+      font-size: 1rem;
+    }
+
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      margin: 20px ;
+    }
+    .image-box{
+      margin-right: 20px;
+      }
+    .image-box img {
+      display: block;
+      width: 100%;
+    }
+    .image-box .author {
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 5px;
+
+    }
+    .container p {
+      flex: 1;
+      text-align: justify;
+    }
