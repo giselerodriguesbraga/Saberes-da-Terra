@@ -1,56 +1,76 @@
 
 /*Barra de pesquisa */
-document.addEventListener("DOMContentLoaded", function () {
 
-    const sugestoesBox = document.getElementById("sugestoes-box");
-    const searchInput = document.getElementById("search-input");
+   document.addEventListener("DOMContentLoaded", function () {
 
-    // direcionar para algumas paginas
-    const paginas = [
-      { nome: "Home", link: "index.html" },
-      { nome: "Notícias", link: "noticias.html" },
-      { nome: "Fale Conosco", link: "faleconosco.html" },
-      { nome: "Curiosidades sobre as etnias", link: "pagina5.html" },
-      { nome: " Etnia Ticuna", link: "pagina1.html" },
-      { nome: " Etnia Kocama", link: "pagina2.html" },
-      { nome: " Etnia Kambeba", link: "pagina3.html" },
-      { nome: " Etnia Kanamari", link: "pagina4.html" }
-    ];
+  const sugestoesBox = document.getElementById("sugestoes-box");
+  const searchInput = document.getElementById("search-input");
+  const barra = document.getElementById("barra-pesquisa");
+  const botao = document.getElementById("search-button");
+  const overlay = document.getElementById("search-overlay");
 
-    searchInput.addEventListener("input", () => {
-      const termo = searchInput.value.toLowerCase();
-      sugestoesBox.innerHTML = "";
+  const paginas = [
+    { nome: "Home", link: "index.html" },
+    { nome: "Notícias", link: "noticias.html" },
+    { nome: "Fale Conosco", link: "faleconosco.html" },
+    { nome: "Curiosidades sobre as etnias", link: "pagina5.html" },
+    { nome: "Etnia Ticuna", link: "pagina1.html" },
+    { nome: "Etnia Kocama", link: "pagina2.html" },
+    { nome: "Etnia Kambeba", link: "pagina3.html" },
+    { nome: "Etnia Kanamari", link: "pagina4.html" }
+  ];
 
-      if (termo === "") {
-        sugestoesBox.style.display = "none";
-        return;
-      }
-
-      const resultados = paginas.filter(p => p.nome.toLowerCase().includes(termo));
-
-      if (resultados.length > 0) {
-        resultados.forEach(pagina => {
-          const div = document.createElement("div");
-          div.textContent = pagina.nome;
-          div.addEventListener("click", () => {
-            window.location.href = pagina.link;
-          });
-          sugestoesBox.appendChild(div);
-        });
-        sugestoesBox.style.display = "block";
-      } else {
-        sugestoesBox.innerHTML = "<div>Nenhum resultado encontrado</div>";
-        sugestoesBox.style.display = "block";
-      }
-    });
-
-    // Fecha as sugestões se clicar fora
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".barra-de-pesquisa")) {
-        sugestoesBox.style.display = "none";
-      }
-    });
+  // Abrir barra
+  botao.addEventListener("click", () => {
+    barra.classList.add("open");
+    overlay.classList.add("active");
+    searchInput.focus();
   });
+
+  // Fechar tudo
+  function fecharBusca() {
+    barra.classList.remove("open");
+    overlay.classList.remove("active");
+    sugestoesBox.style.display = "none";
+    searchInput.value = "";
+  }
+
+  overlay.addEventListener("click", fecharBusca);
+
+  // Busca com múltiplas palavras
+  searchInput.addEventListener("input", () => {
+    const termo = searchInput.value.toLowerCase().trim();
+    sugestoesBox.innerHTML = "";
+
+    if (termo === "") {
+      sugestoesBox.style.display = "none";
+      return;
+    }
+
+    const palavras = termo.split(" ");
+
+    const resultados = paginas.filter(pagina =>
+      palavras.every(p => pagina.nome.toLowerCase().includes(p))
+    );
+
+    if (resultados.length > 0) {
+      resultados.forEach(pagina => {
+        const div = document.createElement("div");
+        div.textContent = pagina.nome;
+        div.addEventListener("click", () => {
+          window.location.href = pagina.link;
+        });
+        sugestoesBox.appendChild(div);
+      });
+      sugestoesBox.style.display = "block";
+    } else {
+      sugestoesBox.innerHTML = "<div>Nenhum resultado encontrado</div>";
+      sugestoesBox.style.display = "block";
+    }
+  });
+
+});
+
 
 
 /*botão Ler Mais..*/

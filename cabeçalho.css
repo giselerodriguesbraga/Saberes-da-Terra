@@ -25,70 +25,99 @@
       overflow: hidden;
       transition: width 0.4s ease;
       width: 45px;
-      z-index: 10;
-    }
-    .barra-de-pesquisa:hover {
-      width: 250px;
-    }
-    .barra-de-pesquisa.open {
-      width: 250px;
-    }
-    .barra-de-pesquisa.open input {
-      opacity: 1;
+      z-index: 1001;
+      backdrop-filter: blur(6px);
     }
 
-    .barra-de-pesquisa input {
+    /* Quando abrir */
+    .barra-de-pesquisa.open {
+      width: 300px;
+    }
+
+    /* Input */
+   .barra-de-pesquisa input {
       flex: 1;
       border: none;
       outline: none;
       font-size: 16px;
       padding: 8px;
-      font-size: 16px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      opacity: 1;              /* sempre visível */
+      background: transparent;
     }
-    .barra-de-pesquisa:hover input {
-      opacity: 1;
+    .barra-de-pesquisa input::placeholder {
+     color: #999;
     }
+
     .search-icon {
-      background: white;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
       border: none;
-      color: #166534;
-      width: 35px;
-      height: 35px;
+      color: white;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 4px 10px rgba(34, 197, 94, 0.5);
+      transition: all 0.25s ease;
     }
+
+    .search-icon:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(34, 197, 94, 0.7);
+    }
+
+    .search-icon:active {
+      transform: scale(0.95);
+    }
+
     .search-icon i {
       font-size: 18px;
+      top: 50%;
     }
-    
+
+
+    /* Overlay (fundo escuro) */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* Sugestões */
     .sugestoes {
-      display: flex;
       position: absolute;
-      background: white;
-      color: black;
-      border: 1px solid #ccc;
-      width: 250px;
-      /*max-height: 150px;*/
-      height: 250px;
-      margin: 0 0 0 20px;
-      overflow-y: none;
+      top: 70px;
       right: 40px;
-      z-index: 999;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      background: white;
+      width: 280px;
+      max-height: 300px;
+      overflow-y: auto;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 1002;
+      color: black;
     }
 
     .sugestoes div {
-      padding: 8px;
+      padding: 10px;
       cursor: pointer;
     }
 
     .sugestoes div:hover {
       background-color: #16A34A;
+      color: white;
     }
 
     .logo{
@@ -121,49 +150,168 @@
       text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.459);
     }
 
-      /* Menu*/
-    nav {
-      background-color: var(--cor2);
-      box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.493);
-      text-align: left;
-      position: relative;
-    }
-    /* Botão hamburguer (oculto no desktop) */
-    .hamburger {
-      display: none;  /* Só aparece no mobile */
-      background: none;
-      border: none;
-      color: white;
-      font-size: 28px;
-      cursor: pointer;
-      padding: 15px 20px;
+ /* ===============================
+   MENU DESKTOP
+================================ */
+
+    .nav-top {
+      width: 100%;
+      background: #1a7e40;
     }
 
-    nav ul {
-      list-style: none;
+    #menu {
       display: flex;
-      justify-content: left;
-      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
       margin: 0;
       padding: 0;
     }
 
-    nav ul li {
-      margin: 0;
-    }
-   
-    nav a{
-      display: block;
+    #menu li a {
       color: white;
       padding: 15px 20px;
-      border-radius: 5px;
+      display: block;
       text-decoration: none;
-      font-weight: bold;
-      transition: background 0.5s;
     }
 
+    nav a{
+          display: block;
+          color: white;
+          padding: 15px 20px;
+          border-radius: 5px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background 0.5s;
+        }
+
     nav a:hover{
-      background-color: var(--cor1);
-      color: white;
+          background-color: var(--cor1);
+          color: white;
+        }
+
+    /* Esconde o botão no desktop */
+    .hamburger {
+      display: none;
     }
+
+    /* ===============================
+      HEADER RESPONSIVO
+    ================================ */
+
+  @media (max-width: 950px) {
+
+  header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .logo img {
+    width: 140px;
+    height: auto;
+  }
+
+  .header-text {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .header-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .header-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .sugestoes {
+    margin-top: 40px;
+  }
+}
+
+
+/* ===============================
+   MENU MOBILE (layout app)
+================================ */
+
+@media (max-width: 900px) {
+
+  header {
+    padding-top: 80px; /* cria espaço para menu e lupa */
+  }
+
+  .header-text {
+    margin-top: 40px;
+  }
+
+  /* Botão ☰ */
+  .nav-top {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: transparent;
+    z-index: 2001;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    font-size: 26px;
+    background: rgba(255,255,255,0.95);
+    border: none;
+    border-radius: 10px;
+    color: #166534;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    cursor: pointer;
+  }
+
+  /* Menu lateral */
+  #menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100vh;
+    background: #166534;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: 0.4s ease;
+    z-index: 2002;
+  }
+
+  #menu li a {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  #menu.open {
+    left: 0;
+  }
+
+}
+
+
+/* ===============================
+   FUNDO ESCURO DO MENU
+================================ */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 2000;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 

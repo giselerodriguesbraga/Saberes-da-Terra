@@ -73,3 +73,29 @@
       flex: 1;
       text-align: justify;
     }
+
+     @media (max-width: 950px) {
+
+      .etnia{
+          padding: 10px;
+          margin: auto;
+        }
+        main section#etnia{
+          padding: 15px 10px;
+        }
+        section#etnia h1{
+          font-size: 2rem;
+        }
+     }
+
+    @media (max-width: 768px){
+          /*paginas*/
+           .paginas {
+            width: 90%;
+            margin: 20px auto;
+          }
+          /*etniaticuna*/
+            .container {
+              flex-direction: column;
+            }
+        }

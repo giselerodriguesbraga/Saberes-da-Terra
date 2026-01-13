@@ -145,3 +145,15 @@ body {
       color: #003366;
       font-weight: bold;
     } 
+
+      @media (max-width: 950px) {
+         .curiosidades-container {
+          grid-template-columns: repeat(2, 1fr);
+          }
+      }
+
+      @media (max-width: 600px) {
+        .curiosidades-container {
+          grid-template-columns: 1fr;
+        }
+      }

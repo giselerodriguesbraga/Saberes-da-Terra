@@ -14,15 +14,17 @@
 
      <header>
      <!--Barra de pesquisa-->
-     <div class="barra-de-pesquisa">
+
+      <div class="overlay" id="search-overlay"></div>
+      <div class="barra-de-pesquisa" id="barra-pesquisa">
         <button id="search-button" class="search-icon">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-        <input type="text" placeholder="Pesquisar..." id="search-input">
+       <input type="text" placeholder="Pesquisar..." id="search-input">
       </div>
 
-       <div class="sugestoes" id="sugestoes-box"></div>
- 
+    <div class="sugestoes" id="sugestoes-box"></div>
+    <div class="overlay" id="search-overlay"></div>
 
       <!--logo e título-->
        <div class="logo">
@@ -34,19 +36,23 @@
           <h2>Matemática Indígena</h2>
         </div>
     </header>
-      <!--Menu de navegação-->
-    <nav>
-      <button class="hamburger" id="btn-menu">
-        ☰
-      </button>
-        <ul id="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="noticias.html">Notícias</a></li>
-          <li><a href="#curiosidades">Curiosidades</a></li>
-          <li><a href="#faleconosco">Fale Conosco</a></li>
-          <li><a href="galeria.html">Galeria de Fotos</a></li>
-        </ul>
-      </nav>
+
+      <nav class="nav-top">
+  <button class="hamburger" id="btn-menu">☰</button>
+
+  <ul id="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="noticias.html">Notícias</a></li>
+    <li><a href="#curiosidades">Curiosidades</a></li>
+    <li><a href="galeria.html">Galeria de Fotos</a></li>
+    <li><a href="museu.html">Museu</a></li>
+    <li><a href="#faleconosco">Fale Conosco</a></li>
+  </ul>
+</nav>
+
+<!-- overlay do menu -->
+<div class="menu-overlay" id="menu-overlay"></div>
+
   
   <main>
 

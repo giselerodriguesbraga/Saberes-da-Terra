@@ -80,3 +80,14 @@
   font-size: 1rem;
   margin-top: 5px;
 }
+
+/* Linha do tempo */
+@media (max-width: 700px) {
+  .linha-do-tempo {
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  .etnia-item {
+    width: 150px;
+  }
+}
