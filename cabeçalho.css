@@ -2,9 +2,9 @@
 
 /*Cabeçalho*/
     header{ 
-      background: url(imagens/2.0.jpg)center/cover no-repeat;
+      background: url(imagens/teste.png)center/cover no-repeat;
       color: white;
-      padding: 70px;
+      padding: 80px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -156,7 +156,7 @@
 
     .nav-top {
       width: 100%;
-      background: #1a7e40;
+      background: var(--cor3);
     }
 
     #menu {
@@ -185,7 +185,7 @@
         }
 
     nav a:hover{
-          background-color: var(--cor1);
+          background-color: rgba(216, 110, 84, 0.548);
           color: white;
         }
 
@@ -264,7 +264,7 @@
     background: rgba(255,255,255,0.95);
     border: none;
     border-radius: 10px;
-    color: #166534;
+    color: var(--cor3);
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
     cursor: pointer;
   }
@@ -276,7 +276,7 @@
     left: -260px;
     width: 260px;
     height: 100vh;
-    background: #166534;
+    background: var(--cor4);
     flex-direction: column;
     padding-top: 60px;
     transition: 0.4s ease;

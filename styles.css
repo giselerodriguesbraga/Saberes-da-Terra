@@ -12,7 +12,9 @@
     --cor0: #DCFCE7;
     --cor1: #16A34A;
     --cor2: #157F3D;
-    --cor3: #166534;
+    --cor3: #843815;
+    --cor4: #608A38;
+    --cor5: #166534;
 }
 
 *{
@@ -24,7 +26,8 @@
 body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background-color: var(--cor3);
+    /* background-color: var(--cor4);*/
+    background-color: #265323;
 
       overflow-x: hidden;
     }
@@ -40,6 +43,10 @@ body {
 }
     
     main{
+        background-image: url('imagens/plano-de-fundo.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         background-color: white;
         min-width: 250px;
         max-width: 1500px;

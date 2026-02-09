@@ -2,12 +2,16 @@
 
  /*paginas das etnias*/
  .etnia{
-  padding: 10px 60px;
+  padding: 20px 60px;
   margin: auto;
  }
 
+ .decoraçao{
+  max-width: 100%;
+ }
+
     main section#etnia{
-      background-color: var(--cor2);
+     background: url(imagens/fundo-titulo.png)center/cover no-repeat;
       color: white;
       max-width: 900px;
       margin: 20px auto;
