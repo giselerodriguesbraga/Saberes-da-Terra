@@ -26,9 +26,8 @@
 body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-    /* background-color: var(--cor4);*/
-    background-color: #265323;
-
+      /* background-color: var(--cor4);*/
+      background-color: #265323;
       overflow-x: hidden;
     }
 
