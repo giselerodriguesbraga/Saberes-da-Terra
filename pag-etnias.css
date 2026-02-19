@@ -8,6 +8,7 @@
 
  .decoraçao{
   max-width: 100%;
+  display: block;
  }
 
     main section#etnia{
@@ -27,8 +28,7 @@
       margin: 0;
     }
     .etnia h2 {
-      background-image: linear-gradient(to right, var(--cor1), var(--cor0
-      ));
+      background-image: linear-gradient(to right, #6DA839, var(--cor0));
       margin-bottom: 1em;
       padding: 5px;
       font-size: 30px;
@@ -61,6 +61,7 @@
     }
     .image-box{
       margin-right: 20px;
+      width: 100%;
       }
     .image-box img {
       display: block;
@@ -84,22 +85,25 @@
           padding: 10px;
           margin: auto;
         }
+
+      .decoraçao {
+        content: url("imagens/decoracao-mobile.png");
+      }
+
         main section#etnia{
           padding: 15px 10px;
         }
         section#etnia h1{
           font-size: 2rem;
         }
-     }
-
-    @media (max-width: 768px){
+    
           /*paginas*/
-           .paginas {
-            width: 90%;
-            margin: 20px auto;
+          .paginas {
+          width: 90%;
+          margin: 20px auto;
+        }
+        /*etniaticuna*/
+          .container {
+            flex-direction: column;
           }
-          /*etniaticuna*/
-            .container {
-              flex-direction: column;
-            }
         }

@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     { nome: "Etnia Ticuna", link: "pagina1.html" },
     { nome: "Etnia Kocama", link: "pagina2.html" },
     { nome: "Etnia Kambeba", link: "pagina3.html" },
-    { nome: "Etnia Kanamari", link: "pagina4.html" }
+    { nome: "Etnia Kanamari", link: "pagina4.html" },
+    { nome: "Autor-criador do site", link: "pesquisadores.html"}
   ];
 
   // Abrir e fechar ao clicar na lupa
