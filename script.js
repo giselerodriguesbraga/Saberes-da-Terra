@@ -1,7 +1,7 @@
 
 /*Barra de pesquisa */
 
-   document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
   const sugestoesBox = document.getElementById("sugestoes-box");
   const searchInput = document.getElementById("search-input");
@@ -20,16 +20,20 @@
     { nome: "Etnia Kanamari", link: "pagina4.html" }
   ];
 
-  // Abrir barra
+  // Abrir e fechar ao clicar na lupa
   botao.addEventListener("click", () => {
-    barra.classList.add("open");
-    overlay.classList.add("active");
-    searchInput.focus();
+    barra.classList.toggle("active");
+    overlay.classList.toggle("active");
+
+    if (barra.classList.contains("active")) {
+      searchInput.focus();
+    } else {
+      fecharBusca();
+    }
   });
 
-  // Fechar tudo
   function fecharBusca() {
-    barra.classList.remove("open");
+    barra.classList.remove("active");
     overlay.classList.remove("active");
     sugestoesBox.style.display = "none";
     searchInput.value = "";
@@ -37,7 +41,7 @@
 
   overlay.addEventListener("click", fecharBusca);
 
-  // Busca com múltiplas palavras
+  // Busca
   searchInput.addEventListener("input", () => {
     const termo = searchInput.value.toLowerCase().trim();
     sugestoesBox.innerHTML = "";
@@ -47,19 +51,15 @@
       return;
     }
 
-    const palavras = termo.split(" ");
-
     const resultados = paginas.filter(pagina =>
-      palavras.every(p => pagina.nome.toLowerCase().includes(p))
+      pagina.nome.toLowerCase().includes(termo)
     );
 
     if (resultados.length > 0) {
       resultados.forEach(pagina => {
         const div = document.createElement("div");
         div.textContent = pagina.nome;
-        div.addEventListener("click", () => {
-          window.location.href = pagina.link;
-        });
+        div.onclick = () => window.location.href = pagina.link;
         sugestoesBox.appendChild(div);
       });
       sugestoesBox.style.display = "block";
@@ -70,6 +70,7 @@
   });
 
 });
+
 
 
 
