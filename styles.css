@@ -81,7 +81,11 @@ body {
         width: 90%;
         margin: 20px auto;
       }
-
+      
+    section#home h2 {
+      text-align: center;
+    }
+    
    .hidden{
         display: none;
       }
