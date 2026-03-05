@@ -8,15 +8,30 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(response => response.json())
     .then(data => {
 
+       console.log("Total de itens no RSS:", data.items.length);
+
+       data.items.forEach((item, index) => {
+       console.log("Item", index, "tem thumbnail?", item.thumbnail);
+        });
+
       const carousel = document.getElementById("mainCarousel");
-      const newsContainer = document.getElementById("newsContainer");
+      const newsContainer = document.getElementById("newsContainerUEA");
 
       carousel.innerHTML = "";
       newsContainer.innerHTML = "";
 
       function pegarImagem(item) {
-        const match = item.content.match(/<img[^>]+src="([^">]+)"/);
-        return match ? match[1] : null;
+        if (item.thumbnail && item.thumbnail !== "") {
+        return item.thumbnail;
+      }
+
+      const match = item.content.match(/<img[^>]+src="([^">]+)"/);
+      if (match) {
+        return match[1];
+      }
+
+      // 👇 IMAGEM PADRÃO
+      return "noticias/padrao.jpg";
       }
 
       // ===== CAROUSEL =====
@@ -43,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
       iniciarAutoplay();
 
       // ===== NEWS CARDS =====
-      data.items.slice(5, 11).forEach(item => {
+      data.items.slice(0, 7).forEach(item => {
 
         const imagem = pegarImagem(item);
         if (!imagem) return;
