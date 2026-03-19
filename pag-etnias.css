@@ -87,6 +87,43 @@
       text-align: justify;
     }
 
+    .imagem-dupla {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: nowrap;
+      margin: 20px 0;
+    }
+    .imagem-dupla img{
+     width: 100%;
+     max-width: 200px;
+     height: auto;
+     object-fit: cover;
+     border-radius: 8px;
+     cursor: pointer;
+     transition: transform 0.3s;
+    }
+    .imagem-dupla img:hover{
+      transform: scale(1.05);
+    }
+    .lightbox{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    }
+    .lightbox img{
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+    }
+
      @media (max-width: 950px) {
 
       .etnia{
