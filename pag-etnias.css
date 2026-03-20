@@ -53,6 +53,11 @@
       font-size: 1rem;
     }
 
+    .titulo-centralizado{
+    text-align: center;
+    padding: 5px;
+    }
+
 
     .container {
       display: flex;
@@ -124,23 +129,9 @@
         border-radius: 10px;
     }
 
-    .grafico{
-        display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: nowrap;
-      margin: 20px 0;
+    div.grafico{
+      align-items: center;
     }
-    .grafico img{
-       width: 100%;
-     max-width: 300px;
-     height: auto;
-     object-fit: cover;
-     border-radius: 8px;
-     cursor: pointer;
-     transition: transform 0.3s;
-    }
-
 
      @media (max-width: 950px) {
 
