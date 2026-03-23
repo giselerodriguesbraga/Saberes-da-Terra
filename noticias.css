@@ -135,7 +135,7 @@
 }
 
 
-/* ===== NOTÍCIAS ===== */
+/* ===== NOTÍCIAS CARDS===== */
 
 .news-title {
     text-align: left;
@@ -176,6 +176,15 @@
 .news-card:hover {
     transform: scale(1.03);
 }
+
+.news-caption {
+    font-size: 14px;
+    padding: 10px;
+    color: #166b56;
+    line-height: 1.4;
+}
+
+
 
 /* ===== RESPONSIVO ===== */
 
