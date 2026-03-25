@@ -57,13 +57,12 @@
 .slide {
     min-width: 100%;
     height: 380px;
-    flex-shrink: 0;
+    position: relative;
 }
 
 .slide img {
     width: 100%;
-    height: 380px;
-    
+    height: 380px; 
     object-fit: cover;
 }
 
@@ -109,31 +108,6 @@
 .arrow:hover {
     background: rgba(0,0,0,0.6);
 }
-
-/* BOLINHAS DO SLIDE */
-.dots {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    margin: 5px;
-    background: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.dot.active {
-    background: #1a7447;
-    width: 30px;
-}
-
 
 /* ===== NOTÍCIAS CARDS===== */
 
@@ -198,14 +172,16 @@
     }
 
     .slide img {
+        width: 100%;
         height: 260px;
+        object-fit: cover;
     }
     .slide {
-        height: 260px;
+        height: auto;
     }
      .slide-title {
-        font-size: 15px;
-        padding: 12px 15px;
+        font-size: 14px;
+        padding: 8px 12px;
     }
 
     .news-container {
